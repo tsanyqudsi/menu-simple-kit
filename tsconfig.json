@@ -50,11 +50,8 @@
             "@store": [
                 "src/store"
             ],
-            "@promotions": [
-                "src/configs/promotions"
-            ],
-            "@menu": [
-                "src/configs/menu"
+            "@logo": [
+                "src/configs/logo"
             ]
         }
     },

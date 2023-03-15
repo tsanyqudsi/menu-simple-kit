@@ -22,7 +22,7 @@ export const Hero = (props: HeroProps) => {
 	useEffect(() => {
 		const fetchImage = async () => {
 			try {
-				const response = await import(`../../assets/images/${props.logo}.png`); // change relative path to suit your needs
+				const response = await import(`../../configs/logo/${props.logo}.png`); // change relative path to suit your needs
 				setImage(response.default);
 			} catch (err) {
 				setImage(defaultLogo);

@@ -9,6 +9,10 @@ import yaml from '@modyfi/vite-plugin-yaml';
 // https://vitejs.dev/config/
 
 export default defineConfig({
+	server: {
+		host: true,
+		port: 8000, // This is the port which we will use in docker
+	},
 	plugins: [
 		react(),
 		pages(),

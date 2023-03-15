@@ -21,7 +21,8 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router": "^6.8.2",
-		"react-router-dom": "^6.8.2"
+		"react-router-dom": "^6.8.2",
+		"xlsx": "https://cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz"
 	},
 	"devDependencies": {
 		"@modyfi/vite-plugin-yaml": "^1.0.4",
@@ -39,7 +40,6 @@
 		"vite": "^4.1.0",
 		"vite-aliases": "^0.10.0",
 		"vite-plugin-eslint2": "^3.2.1",
-		"vite-plugin-pages": "^0.28.0",
-		"xlsx": "https://cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz"
+		"vite-plugin-pages": "^0.28.0"
 	}
 }
