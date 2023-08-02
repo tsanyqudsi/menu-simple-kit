@@ -52,6 +52,9 @@
             ],
             "@logo": [
                 "src/configs/logo"
+            ],
+            "@theme": [
+                "src/theme"
             ]
         }
     },

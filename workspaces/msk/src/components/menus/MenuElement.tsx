@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Typography } from '@mui/material';
+import { Box, Button, Card, CardMedia, Typography, Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 import placeholderImage from '@assets/images/placeholderImage.jpeg';
 import { formatToRupiah } from '@api';
@@ -33,20 +33,33 @@ export const MenuElement = (props: MenuElementProps) => {
 	});
 
 	return (
-		<Link to={'/detail'}>
+		<Grid
+			item
+			xs={12}
+			sm={6}
+			md={4}
+			lg={3}
+			xl={3}
+			sx={{ margin: '10px 0 10px 0' }}
+		>
 			<Card
 				component={'li'}
 				sx={{
 					width: '100%',
 					display: 'flex',
-					justifyContent: 'space-between',
+					flexDirection: 'column',
+					justifyContent: 'center',
+					alignItems: 'center',
+					listStyle: 'none',
+					padding: '30px',
 				}}
 			>
 				{!loading && (
 					<CardMedia
 						sx={{
-							width: '200px',
-							height: '200px',
+							width: '180px',
+							height: '180px',
+							borderRadius: '50%',
 							objectFit: 'cover',
 						}}
 						component={'img'}
@@ -56,10 +69,11 @@ export const MenuElement = (props: MenuElementProps) => {
 				)}
 				<Box
 					sx={{
-						paddingRight: '2rem',
 						display: 'flex',
 						flexDirection: 'column',
-						alignItems: 'end',
+						alignItems: 'center',
+						color: 'black',
+						padding: '20px 0 15px 0',
 					}}
 				>
 					<Typography fontWeight={600} fontSize={24}>
@@ -68,7 +82,12 @@ export const MenuElement = (props: MenuElementProps) => {
 					<Typography>{formatToRupiah(props.price)}</Typography>
 					<Typography>{props.shortDescription}</Typography>
 				</Box>
+				<Link to={'/detail'}>
+					<Button variant="contained" color="secondary">
+						Selengkapnya
+					</Button>
+				</Link>
 			</Card>
-		</Link>
+		</Grid>
 	);
 };
