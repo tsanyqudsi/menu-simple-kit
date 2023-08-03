@@ -1,8 +1,8 @@
-import { Box, Button, Card, CardMedia, Typography, Grid } from '@mui/material';
+import { Box, Card, CardMedia, Typography, Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 import placeholderImage from '@assets/images/placeholderImage.jpeg';
 import { formatToRupiah } from '@api';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 interface MenuElementProps {
 	image: string;
@@ -82,11 +82,11 @@ export const MenuElement = (props: MenuElementProps) => {
 					<Typography>{formatToRupiah(props.price)}</Typography>
 					<Typography>{props.shortDescription}</Typography>
 				</Box>
-				<Link to={'/detail'}>
+				{/* <Link to={'/detail'}>
 					<Button variant="contained" color="secondary">
-						Selengkapnya
+						Pesan
 					</Button>
-				</Link>
+				</Link> */}
 			</Card>
 		</Grid>
 	);

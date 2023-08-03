@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
 
 export const Footer = () => {
-	return <Box></Box>;
+	return <Box height="100px"></Box>;
 };
