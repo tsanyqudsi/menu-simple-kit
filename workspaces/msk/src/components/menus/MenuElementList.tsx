@@ -12,7 +12,7 @@ interface MenuElementProps {
 	price: string;
 }
 
-export const MenuElement = (props: MenuElementProps) => {
+export const MenuElementList = (props: MenuElementProps) => {
 	const [image, setImage] = useState<string>();
 	const [loading, setLoading] = useState<boolean>(true);
 
@@ -33,13 +33,13 @@ export const MenuElement = (props: MenuElementProps) => {
 	});
 
 	return (
+		// <Link to={'/detail'} />
 		<Grid
-			item
-			xs={6}
-			sm={4}
-			md={4}
-			lg={3}
-			xl={3}
+			xs={12}
+			sm={12}
+			md={12}
+			lg={12}
+			xl={12}
 			sx={{ margin: '10px 0 10px 0', padding: '0 4px 0 4px' }}
 		>
 			<Card
@@ -47,19 +47,14 @@ export const MenuElement = (props: MenuElementProps) => {
 				sx={{
 					width: '100%',
 					display: 'flex',
-					flexDirection: 'column',
-					justifyContent: 'center',
-					alignItems: 'center',
-					listStyle: 'none',
-					padding: '8px',
+					justifyContent: 'space-between',
 				}}
 			>
 				{!loading && (
 					<CardMedia
 						sx={{
-							width: '100%',
+							width: '140px',
 							height: '140px',
-							borderRadius: '5px',
 							objectFit: 'cover',
 						}}
 						component={'img'}
@@ -69,11 +64,10 @@ export const MenuElement = (props: MenuElementProps) => {
 				)}
 				<Box
 					sx={{
+						paddingRight: '8px',
 						display: 'flex',
 						flexDirection: 'column',
-						alignItems: 'center',
-						color: 'black',
-						padding: '10px 0 7.5px 0',
+						alignItems: 'end',
 					}}
 				>
 					<Typography fontWeight={600} fontSize={24}>
@@ -82,11 +76,6 @@ export const MenuElement = (props: MenuElementProps) => {
 					<Typography>{formatToRupiah(props.price)}</Typography>
 					<Typography>{props.shortDescription}</Typography>
 				</Box>
-				{/* <Link to={'/detail'}>
-					<Button variant="contained" color="secondary">
-						Pesan
-					</Button>
-				</Link> */}
 			</Card>
 		</Grid>
 	);
