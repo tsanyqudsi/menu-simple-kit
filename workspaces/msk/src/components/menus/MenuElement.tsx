@@ -35,12 +35,12 @@ export const MenuElement = (props: MenuElementProps) => {
 	return (
 		<Grid
 			item
-			xs={12}
-			sm={6}
+			xs={6}
+			sm={4}
 			md={4}
 			lg={3}
 			xl={3}
-			sx={{ margin: '10px 0 10px 0' }}
+			sx={{ margin: '10px 0 10px 0', padding: '0 4px 0 4px' }}
 		>
 			<Card
 				component={'li'}
@@ -51,15 +51,15 @@ export const MenuElement = (props: MenuElementProps) => {
 					justifyContent: 'center',
 					alignItems: 'center',
 					listStyle: 'none',
-					padding: '30px',
+					padding: '8px',
 				}}
 			>
 				{!loading && (
 					<CardMedia
 						sx={{
-							width: '180px',
-							height: '180px',
-							borderRadius: '50%',
+							width: '100%',
+							height: '140px',
+							borderRadius: '5px',
 							objectFit: 'cover',
 						}}
 						component={'img'}
@@ -73,7 +73,7 @@ export const MenuElement = (props: MenuElementProps) => {
 						flexDirection: 'column',
 						alignItems: 'center',
 						color: 'black',
-						padding: '20px 0 15px 0',
+						padding: '10px 0 7.5px 0',
 					}}
 				>
 					<Typography fontWeight={600} fontSize={24}>

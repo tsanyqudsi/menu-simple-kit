@@ -4,7 +4,9 @@ import { pink } from '@mui/material/colors';
 const themeCustom = createTheme({
 	palette: {
 		primary: {
-			main: pink['A700'],
+			main: '#c2195f',
+			light: '#bd1e60',
+			dark: '#851443',
 		},
 		secondary: {
 			main: pink['900'],

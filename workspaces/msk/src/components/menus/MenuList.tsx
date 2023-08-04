@@ -16,8 +16,6 @@ export const MenuList = (props: MenuListProps) => {
 		// }}
 		// >
 		// </ul>
-		<Grid container spacing={3} sx={{ padding: '0 20px 0 20px' }}>
-			{props.children}
-		</Grid>
+		<Grid container>{props.children}</Grid>
 	);
 };
