@@ -8,7 +8,7 @@ export type BaseLayoutProps = {
 export const BaseLayout = (props: BaseLayoutProps) => {
 	return (
 		<>
-			<Hero />
+			<Hero backgroundColor="rgb(80,0,40)" />
 			<Container>{props.children}</Container>
 		</>
 	);
