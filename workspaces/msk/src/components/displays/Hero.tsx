@@ -37,6 +37,7 @@ export const Hero = (props: HeroProps) => {
 	if (image)
 		return (
 			<Box
+				id="#"
 				sx={{
 					backgroundColor: props.backgroundColor ?? 'grey.800',
 					color: props.color ?? 'white',

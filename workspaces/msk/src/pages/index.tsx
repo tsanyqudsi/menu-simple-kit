@@ -1,6 +1,7 @@
-import { IconButton, Box } from '@mui/material';
+import { IconButton, Box, Link } from '@mui/material';
 import { GridViewSharp } from '@mui/icons-material';
 import { List } from '@mui/icons-material';
+import { ArrowDropUp } from '@mui/icons-material';
 import { useState } from 'react';
 import { BaseLayout } from '@layouts';
 import { useAtomValue } from 'jotai';
@@ -14,29 +15,45 @@ export default function Home() {
 	if (menu) {
 		return (
 			<BaseLayout>
-				<IconButton
-					onClick={() => {
-						if (disp === 0) {
-							setDisp(1);
-						} else {
-							setDisp(0);
-						}
-					}}
+				<Box
 					sx={{
-						zIndex: 99,
-						backgroundColor: 'white',
 						position: 'fixed',
 						top: 'auto',
 						bottom: 70,
-						boxShadow: '4px 4px 3px rgba(0, 0, 0, .4)',
+						zIndex: 99,
 					}}
 				>
-					{disp === 1 ? (
-						<GridViewSharp sx={{ color: 'primary.main' }} />
-					) : (
-						<List sx={{ color: 'primary.main' }} />
-					)}
-				</IconButton>
+					<IconButton
+						onClick={() => {
+							if (disp === 0) {
+								setDisp(1);
+							} else {
+								setDisp(0);
+							}
+						}}
+						sx={{
+							backgroundColor: 'white',
+							boxShadow: '4px 4px 3px rgba(0, 0, 0, .4)',
+						}}
+					>
+						{disp === 1 ? (
+							<GridViewSharp sx={{ color: 'primary.main' }} />
+						) : (
+							<List sx={{ color: 'primary.main' }} />
+						)}
+					</IconButton>
+					<Box sx={{ display: 'block', paddingTop: '.25rem' }} />
+					<Link href="#">
+						<IconButton
+							sx={{
+								backgroundColor: 'white',
+								boxShadow: '4px 4px 3px rgba(0, 0, 0, .4)',
+							}}
+						>
+							<ArrowDropUp sx={{ color: 'primary.main' }} />
+						</IconButton>
+					</Link>
+				</Box>
 				{Object.keys(menu).map((value, index) => {
 					return (
 						<Menu

@@ -68,7 +68,7 @@ export const MenuElementList = (props: MenuElementProps) => {
 						paddingRight: '8px',
 						display: 'flex',
 						flexDirection: 'column',
-						alignItems: 'end',
+						alignItems: 'flex-end',
 					}}
 				>
 					<Typography fontWeight={600} fontSize={24}>
