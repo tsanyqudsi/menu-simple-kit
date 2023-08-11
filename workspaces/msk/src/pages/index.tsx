@@ -1,4 +1,6 @@
-import { Button } from '@mui/material';
+import { IconButton, Box } from '@mui/material';
+import { GridViewSharp } from '@mui/icons-material';
+import { List } from '@mui/icons-material';
 import { useState } from 'react';
 import { BaseLayout } from '@layouts';
 import { useAtomValue } from 'jotai';
@@ -12,17 +14,29 @@ export default function Home() {
 	if (menu) {
 		return (
 			<BaseLayout>
-				<Button
+				<IconButton
 					onClick={() => {
-						if (disp == 0) {
+						if (disp === 0) {
 							setDisp(1);
 						} else {
 							setDisp(0);
 						}
 					}}
+					sx={{
+						zIndex: 99,
+						backgroundColor: 'white',
+						position: 'fixed',
+						top: 'auto',
+						bottom: 70,
+						boxShadow: '4px 4px 3px rgba(0, 0, 0, .4)',
+					}}
 				>
-					qwerty
-				</Button>
+					{disp === 1 ? (
+						<GridViewSharp sx={{ color: 'primary.main' }} />
+					) : (
+						<List sx={{ color: 'primary.main' }} />
+					)}
+				</IconButton>
 				{Object.keys(menu).map((value, index) => {
 					return (
 						<Menu
@@ -33,6 +47,7 @@ export default function Home() {
 						/>
 					);
 				})}
+				<Box sx={{ height: '36px' }} />
 			</BaseLayout>
 		);
 	}

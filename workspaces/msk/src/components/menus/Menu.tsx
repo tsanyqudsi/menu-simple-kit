@@ -16,7 +16,7 @@ export const Menu = (props: MenuProps) => {
 			<MenuHorizontalBar categories={props.title} />
 			<MenuList>
 				{props.data.map((value, index) => {
-					if (props.disp == 0) {
+					if (props.disp === 0) {
 						return (
 							<MenuElementGrid
 								image={value.Gambar}

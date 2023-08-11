@@ -35,6 +35,7 @@ export const MenuElementList = (props: MenuElementProps) => {
 	return (
 		// <Link to={'/detail'} />
 		<Grid
+			item
 			xs={12}
 			sm={12}
 			md={12}
