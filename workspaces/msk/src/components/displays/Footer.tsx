@@ -1,4 +1,5 @@
 import { AppBar, Box, Toolbar, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
 	return (
@@ -20,9 +21,15 @@ export const Footer = () => {
 					}}
 				>
 					<Box>
-						|<Button sx={{ color: 'white' }}>Order</Button>|
-						<Button sx={{ color: 'white' }}>Bill</Button>|
-						<Button sx={{ color: 'white' }}>Help</Button>|
+						|
+						<Link to={'/detail'}>
+							<Button sx={{ color: 'white' }}>Order</Button>
+						</Link>
+						|
+						<Link to={'/staff'}>
+							<Button sx={{ color: 'white' }}>Bill</Button>
+						</Link>
+						|<Button sx={{ color: 'white' }}>Help</Button>|
 					</Box>
 				</Toolbar>
 			</AppBar>
