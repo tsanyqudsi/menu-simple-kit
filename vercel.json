@@ -1,0 +1,7 @@
+{
+  "rewrites":  [
+    {"source": "/", "destination": "/workspaces/msk/index.html"},
+    {"source": "/staff", "destination": "/workspaces/msk/index.html"},
+    {"source": "/detail", "destination": "/workspaces/msk/index.html"}
+  ]
+}
