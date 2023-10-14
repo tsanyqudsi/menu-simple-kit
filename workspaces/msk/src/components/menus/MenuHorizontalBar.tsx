@@ -1,4 +1,5 @@
-import { Box, Typography } from '@mui/material';
+import { AccordionSummary, Typography } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 interface MenuHorizontalBarProps {
 	categories: string;
@@ -6,21 +7,20 @@ interface MenuHorizontalBarProps {
 
 export const MenuHorizontalBar = (props: MenuHorizontalBarProps) => {
 	return (
-		<Box
-			bgcolor="primary.main"
+		<AccordionSummary
+			expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
+			aria-controls="panel1bh-content"
+			id="panel1bh-header"
 			sx={{
-				margin: '40px 0 10px 0',
-				padding: '15px 0 15px 0',
+				margin: '20px 0 0 0',
+				padding: '0px 3rem 0px 3rem',
 				borderRadius: '10px',
+				backgroundColor: 'primary.main',
 			}}
 		>
-			<Typography
-				fontWeight={500}
-				fontSize={18}
-				sx={{ color: 'white', marginLeft: '2rem' }}
-			>
+			<Typography sx={{ color: 'white', fontWeight: '500', fontSize: '100' }}>
 				{props.categories}
 			</Typography>
-		</Box>
+		</AccordionSummary>
 	);
 };
